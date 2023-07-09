@@ -138,6 +138,7 @@ button:hover {
 .m_txt{
   color: white;
   font-family: sans-serif;
+  margin: 10px;
 }
 
 #box_cont{
