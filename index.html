@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@800&family=Outfit:wght@100;900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Unbounded:wght@600&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@900&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/scrollreveal"></script>
     <title>Mariel (PORTFOLIO)</title>
 </head>
 <body>
@@ -16,22 +17,28 @@
       mariel dagohoy
     </div>
     <div class="github-container">
-        <button class="img-logo" type="button" onclick="window.location.href='https://github.com/yel09'"><img src="images/Github.svg">
+        <button class="img-logo" type="button" onclick="opengithub()"><img src="images/Github.svg">
           <span class="username" id="gitname">yel09</span>
         </button>
+
+        <script>
+          function opengithub(){
+            window.open('https://github.com/yel09','_blank');
+          }
+        </script>
     </div>
   </div>
 
   <section id="intro">
       <div class="box">
         <div class="glitch-wrapper">
-            <div class="glitch" data-text="Unleash the code maestro">Unleash the code maestro</div>
+            <div class="glitch" data-text="Code, Create, Connect">Code, Create, Connect</div>
         </div>
           <div class="btn_container">
             <button class="btn" id="button-dark" type="button" onclick="window.location.href='#works_showcase'">
               <img src="images/Magnifying Glass.svg">Works
             </button>
-            <button class="btn" id="button-light" type="button" onclick="window.location.href='#contact'">
+            <button class="btn" id="button-light" type="button" onclick="window.location.href='#cont_text'">
               <img src="images/message.svg">Get in touch
             </button>
           </div>
@@ -280,25 +287,70 @@
         work together to create extraordinary projects!</div>
 
       <div class="container_space">
-
-        <button class="contacts-btn" id="fb-btn" type="button" onclick="window.location.href='https://www.facebook.com/mariel.dagohoy30'"><img src="images/facebook.svg">
-          <div class="username">mariel.dagohoy30</div>
+          <button class="contacts-btn" id="fb-btn" type="button" onclick="openFacebookProfile()">
+            <img src="images/facebook.svg">
+            <div class="username">mariel.dagohoy30</div>
         </button>
+        
+        <script>
+        function openFacebookProfile() {
+            window.open('https://www.facebook.com/mariel.dagohoy30', '_blank');
+        }
+        </script>
         <button class="contacts-btn" id="gmail-btn" type="button" onclick="window.location.href='mailto:dagohoymore30@gmail.com'"><img src="images/gmail.svg">
           <div class="username">dagohoymore30@gmail.com</div>
         </button>
-        <button class="contacts-btn" id="linkedin-btn" type="button" onclick="window.location.href='https://www.linkedin.com/in/mariel-dagohoy-443b00144/'"><img src="images/linkedin.svg">
+        <button class="contacts-btn" id="linkedin-btn" type="button" onclick="openlinkedIn()"><img src="images/linkedin.svg">
           <div class="username">Mariel Dagohoy</div>
         </button>
 
+        <script>
+          function openlinkedIn(){
+            window.open('https://www.linkedin.com/in/mariel-dagohoy-443b00144/','_blank');
+          }
+        </script>
+
       </div>
     </section>
+
+    <!-- <div onclick="scrollToTop()" class="scrolltop" id="topbtn">back</div> -->
+
+    <button onclick="topFunction()" id="myBtn" title="Go to top">
+      <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="white" class="bi bi-arrow-up-circle-fill" viewBox="0 0 16 16">
+        <path d="M16 8A8 8 0 1 0 0 8a8 8 0 0 0 16 0zm-7.5 3.5a.5.5 0 0 1-1 0V5.707L5.354 7.854a.5.5 0 1 1-.708-.708l3-3a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1-.708.708L8.5 5.707V11.5z"/>
+      </svg>
+    </button>
+    <script src="style.js"></script>
+
+
 
     <footer>
       All Rights Reserve by Mariel Dagohoy 2023
     </footer>
 
-
+    <script>
+      ScrollReveal({
+        reset: true,
+        distance: '60px',
+        delay: 300
+      });
+      ScrollReveal().reveal('.title_logo, .img-logo, #cont_text',{
+        delay: 400, 
+        origin: 'top',
+      })
+      ScrollReveal().reveal('.tabContainer, .work_box, .tt-box, #myBtn',{
+        delay: 400, 
+        origin: 'right',
+      })
+      ScrollReveal().reveal('.btn_container, .contacts-btn, footer',{
+        delay: 400, 
+        origin: 'bottom',
+      })
+      ScrollReveal().reveal('h2',{
+        delay: 400, 
+        origin: 'left',
+      })
+    </script>
 
 
 </body>

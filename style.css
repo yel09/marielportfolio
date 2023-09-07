@@ -13,8 +13,21 @@ body::-webkit-scrollbar{
 }
 
 :root {
-  --main-font-family: 'Inter', Arial, sans-serif; /* Default font family */
+  --main-font-family: 'Inter', Arial, sans-serif; 
 }
+
+:root{
+  --dark-color: #27374D;
+}
+
+:root{
+  --light-color: #526D82;
+}
+
+:root{
+  --lighter-color: #9DB2BF;
+}
+
 
 section{
   width: 100%;
@@ -114,7 +127,7 @@ h2{
   width: 200px;
   height: 64px;
   border-radius: 10px;
-  background: #27374D;
+  background: var(--dark-color);
   box-shadow: 7px 7px 24px 0px rgba(42, 37, 37, 0.83);
   flex-direction: row;
   display: flex;
@@ -132,11 +145,11 @@ h2{
 }
 
 #button-dark {
-  background-color: #27374D;
+  background-color: var(--dark-color);
 }
 
 #button-light {
-  background-color: #526D82;
+  background-color: var(--light-color);
 }
 
 .btn img{
@@ -172,7 +185,6 @@ h2{
   width: 100%;
   display: flex;
   color: white;
-  text-align: center;
   justify-content: center;
   align-items: center;
 }
@@ -284,7 +296,7 @@ h2{
   width: 293px;
   height: 365px;
   border-radius: 20px;
-  background: #27374D;
+  background: var(--dark-color);
   margin: 20px;
 }
 
@@ -334,10 +346,10 @@ h2{
   width: 200px;
   height: 50px;
   border-radius: 20px;
-  background: #9DB2BF;
+  background: var(--lighter-color);
   justify-content: center;
   flex-shrink: 0;
-  color: #27374D;
+  color: var(--dark-color);
   text-align: center;
   font-family: var(--main-font-family);
   font-size: 17px;
@@ -366,7 +378,7 @@ h2{
   height: 300px;
   flex-shrink: 0;
   border-radius: 20px;
-  background: #526D82;
+  background: var(--light-color);
   margin: 20px;
   margin-top: -120px;
 }
@@ -376,7 +388,7 @@ h2{
   height: 169px;
   flex-shrink: 0;
   border-radius: 10px;
-  background: #27374D;
+  background: var(--dark-color);
   margin-top: 23px;
   margin-left: 17px;
   margin-right: 17px;
@@ -387,7 +399,7 @@ h2{
   height: 59px;
   flex-shrink: 0;
   border-radius: 175px;
-  border: 2px solid #27374D;
+  border: 2px solid var(--dark-color);
   margin-top: 26px;
   margin-left: 210px;
   margin-right: 27px;
@@ -427,7 +439,7 @@ h2{
   height: 64px;
   flex-shrink: 0;
   border-radius: 10px;
-  background: #526D82;
+  background: var(--light-color);
   justify-content: center;
   color: #FFF;
   text-align: center;
@@ -460,7 +472,7 @@ h2{
   flex-direction: column;
   align-items: center; 
   justify-content: center; 
-  margin-top: 10%;
+  margin-top: -25%;
 }
 
 .contacts-btn {
@@ -470,7 +482,7 @@ h2{
   height: 51px;
   flex-shrink: 0;
   border-radius: 15px;
-  background: #27374D;
+  background: var(--dark-color);
   border: none;
   margin: 10px;
   margin-top: 3%;
@@ -523,6 +535,26 @@ footer{
   margin-bottom: 15px;
 }
 
+#myBtn {
+
+  display: none;
+  position: fixed;
+  bottom: 30px; 
+  right: 30px; 
+  z-index: 99; 
+  border: none; 
+  outline: none; 
+  background-color: var(--light-color); 
+  color: white; 
+  cursor: pointer; 
+  padding: 10px; 
+  border-radius: 20px; 
+}
+
+#myBtn:hover {
+  background-color: var(--lighter-color); 
+}
+
 @media screen and (max-width:1800px) {
 
 
@@ -534,57 +566,60 @@ footer{
   /* landing page */
 
   .title_logo {
-    font-size: 20px;
-    margin-top: 40px;
+    font-size: 70px;
+    flex-shrink: 0;
+    margin-top: 10%;
     display: flex;
     align-items: center;
     text-align: center;
     justify-content: center;
-    margin-left: 95px;
+    margin-left: 120px;
   }
   
   .img-logo {
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 160px;
-    height: 40px;
+    width: 360px;
+    height: 100px;
     flex-shrink: 0;
     border-radius: 15px;
-    background: #526D82;
+    background: var(--light-color);
     border: none;
-    margin: 80px;
-    margin-top: 80px;
+    margin-right: -270px;
+    margin-top: 150px;
   }
   
   .img-logo img {
     margin-right: 10px;
+    width: 60px;
   }
 
   #gitname{
     display: inline;
+    font-size: 50px;
   }
 
   .glitch {
-    font-size: 17px;
-    margin-left: 195px;
-    margin-top: 55px;
+    font-size: 40px;
+    margin-left: 700px;
+    margin-top: 200px;
     flex-shrink: 0;
   }
   
   #cover_img img{
-    width: 240px;
-    height: 235px;
-    margin-left: -155px;
-    margin-top: 100%;
+    width: 740px;
+    height: 700px;
+    margin-left: -140px;
+    margin-top: 300%;
   }
 
   .btn_container{
     display:grid;
     flex-wrap: nowrap;
     justify-content: center;
-    margin-top: 230%;
-    margin-left: 150px;
+    margin-top: 00%;
+    margin-left: 500px;
   }
 
   .btn{
@@ -594,9 +629,4 @@ footer{
   }
 
   /* end landing page */
-  
-  
-
-  
-
 }
